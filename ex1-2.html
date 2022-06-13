@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연습문제1</title>
+    <style media="screen">
+        th,td { border: 1px solid; width: 0px; height: 100px}
+        .low {background: skyblue}
+        .regular {background: greenyellow}
+        .over {background: yellow}
+        .obesity {background:orangered}
+
+    </style>
+</head>
+<body>
+    <h2>연습문제1-2</h2>
+    <p>BMI를 계산하는 프로그램</p>
+    <p>체질량지수는 자신의 몸무게(kg)를 키의 제곱(m)으로 나눈 값입니다.</p>
+    <table>
+        <caption>BMI 지수 결과</caption>
+        <thead>
+            <tr>         
+                <th> ~18.5 </th>
+                <th> 18.5~23 </th>
+                <th> 23~25 </th>
+                <th> 25~ </th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr>
+                <td class = "low">저체중</td>
+                <td class = "regular">정상</td>
+                <td class = "over">과체중</td>
+                <td class = "obesity">비만</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var weight = prompt("몸무게를 입력해주세요.kg");
+        var height = prompt("키를 입력해주세요.cm");
+        var height2 = Number(height);
+        var weight2 = Number(weight);
+        var height3 = height2/100;
+        var BMI = weight2 / (height3**2);
+        console.log("당신의 BMI는" + BMI + "입니다.")
+    </script>
+</body>
+</html>
