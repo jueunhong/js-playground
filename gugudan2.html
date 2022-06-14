@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gugudan2</title>
+</head>
+<body>
+    <h2> 함수, if문 사용해서 구구단</h2>
+    출력할 단: <input type="text" id="num">
+    <button onclick="gugudan2()">확인</button>
+    <script>
+        function gugudan2() {
+            var str = document.getElementById('num').value;
+            var n = Number(str);
+            if(n < 2 || n > 9) {
+                    alert("2이상 9이하인 숫자를 입력하세요.");
+            } else{
+                document.write("<h2>" + n + "단</h2>");
+                for(var i = 1; i <= 100; i++) {              
+                    document.write(n + " * " + i + " = " + n*i +"<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
